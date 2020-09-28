@@ -13,13 +13,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.geeksville.android.BuildUtils.isEmulator
 import com.geeksville.android.Logging
-import com.geeksville.mesh.IMeshService
 import com.geeksville.mesh.MeshProtos
-import com.geeksville.mesh.MyNodeInfo
 import com.geeksville.mesh.database.MeshtasticDatabase
 import com.geeksville.mesh.database.PacketRepository
 import com.geeksville.mesh.database.entity.Packet
 import com.geeksville.mesh.service.MeshService
+import com.geeksville.mesh.shared.IMeshService
+import com.geeksville.mesh.shared.MyNodeInfo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

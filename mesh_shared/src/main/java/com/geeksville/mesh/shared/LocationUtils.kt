@@ -1,4 +1,4 @@
-package com.geeksville.mesh.ui
+package com.geeksville.mesh.shared
 
 import kotlin.math.cos
 import kotlin.math.sin

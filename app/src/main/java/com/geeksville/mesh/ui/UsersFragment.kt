@@ -12,9 +12,9 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.geeksville.android.Logging
-import com.geeksville.mesh.NodeInfo
 import com.geeksville.mesh.R
 import com.geeksville.mesh.model.UIViewModel
+import com.geeksville.mesh.shared.NodeInfo
 import kotlinx.android.synthetic.main.adapter_node_layout.view.*
 import kotlinx.android.synthetic.main.nodelist_fragment.*
 import java.text.ParseException
@@ -150,15 +150,15 @@ class UsersFragment : ScreenFragment("Users"), Logging {
 
     private fun getLastTimeValue(n: NodeInfo): String {
         var lastTimeText = "?"
-        val currentTime = (System.currentTimeMillis()/1000).toInt()
-        val threeDaysLong = 3 * 60*60*24
+        val currentTime = (System.currentTimeMillis() / 1000).toInt()
+        val threeDaysLong = 3 * 60 * 60 * 24
 
         //if the lastSeen is too old
         if (n.lastSeen < (currentTime - threeDaysLong))
             return lastTimeText
 
         try {
-            val toLong: Long =  n.lastSeen.toLong()
+            val toLong: Long = n.lastSeen.toLong()
             val long1000 = toLong * 1000L
             val date = Date(long1000)
             val timeFormat = DateFormat.getTimeFormat(context)

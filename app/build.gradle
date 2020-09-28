@@ -1,16 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlinx-serialization'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.github.triplet.play'
 // apply plugin: "app.brant.amazonappstorepublisher"
 
 // Apply the Crashlytics Gradle plugin
 apply plugin: 'com.google.firebase.crashlytics'
-
-// protobuf
-apply plugin: 'com.google.protobuf'
 
 apply plugin: 'kotlin-kapt'
 
@@ -89,25 +85,9 @@ androidExtensions {
     experimental = true
 }
 
-// per protobuf-gradle-plugin docs, this is recommended for android
-protobuf {
-    protoc {
-        artifact = 'com.google.protobuf:protoc:3.9.0'
-    }
-    generateProtoTasks {
-        all().each { task ->
-            task.builtins {
-                java {
-                    // use the smaller android version of the library
-                    option "lite"
-                }
-            }
-        }
-    }
-}
-
 dependencies {
 
+    implementation project(path: ':mesh_shared')
     def room_version = "2.2.5"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -135,21 +115,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    // kotlin serialization
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc"
-
     // rate this app
     implementation "com.vorlonsoft:androidrate:1.2.1"
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
-
-    // You need to depend on the lite runtime library, not protobuf-java
-    // For now I'm not using javalite, because I want JSON printing
-    //implementation 'com.google.protobuf:protobuf-java:3.11.1'
-    //implementation 'com.google.protobuf:protobuf-java-util:3.11.1'
-    implementation 'com.google.protobuf:protobuf-javalite:3.13.0'
 
     // For UART access
     // implementation 'com.google.android.things:androidthings:1.0'

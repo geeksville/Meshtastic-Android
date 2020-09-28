@@ -2,9 +2,9 @@ package com.geeksville.mesh.model
 
 import androidx.lifecycle.MutableLiveData
 import com.geeksville.android.BuildUtils.isEmulator
-import com.geeksville.mesh.MeshUser
-import com.geeksville.mesh.NodeInfo
-import com.geeksville.mesh.Position
+import com.geeksville.mesh.shared.MeshUser
+import com.geeksville.mesh.shared.NodeInfo
+import com.geeksville.mesh.shared.Position
 
 
 /// NodeDB lives inside the UIViewModel, but it needs a backpointer to reach the service

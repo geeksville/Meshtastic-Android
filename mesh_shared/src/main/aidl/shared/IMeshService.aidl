@@ -1,5 +1,5 @@
 // com.geeksville.mesh.IMeshService.aidl
-package com.geeksville.mesh;
+package com.geeksville.mesh.shared;
 
 // Declare any non-default types here with import statements
 parcelable DataPacket;

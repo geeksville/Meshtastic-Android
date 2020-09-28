@@ -1,8 +1,8 @@
 package com.geeksville.mesh.service
 
-import com.geeksville.mesh.MeshUser
-import com.geeksville.mesh.NodeInfo
-import com.geeksville.mesh.Position
+import com.geeksville.mesh.shared.MeshUser
+import com.geeksville.mesh.shared.NodeInfo
+import com.geeksville.mesh.shared.Position
 import org.junit.Assert
 import org.junit.Test
 

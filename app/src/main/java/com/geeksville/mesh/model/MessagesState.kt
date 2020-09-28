@@ -4,8 +4,8 @@ import android.os.RemoteException
 import androidx.lifecycle.MutableLiveData
 import com.geeksville.android.BuildUtils.isEmulator
 import com.geeksville.android.Logging
-import com.geeksville.mesh.DataPacket
-import com.geeksville.mesh.MessageStatus
+import com.geeksville.mesh.shared.DataPacket
+import com.geeksville.mesh.shared.MessageStatus
 
 
 class MessagesState(private val ui: UIViewModel) : Logging {

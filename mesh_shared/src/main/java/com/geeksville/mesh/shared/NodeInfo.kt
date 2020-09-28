@@ -1,8 +1,7 @@
-package com.geeksville.mesh
+package com.geeksville.mesh.shared
 
 import android.os.Parcelable
-import com.geeksville.mesh.ui.bearing
-import com.geeksville.mesh.ui.latLongToMeter
+import com.geeksville.mesh.MeshProtos
 import com.geeksville.util.anonymize
 import kotlinx.android.parcel.Parcelize
 import kotlinx.serialization.Serializable

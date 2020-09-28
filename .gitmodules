@@ -1,5 +1,5 @@
 [submodule "app/src/main/proto"]
-	path = app/src/main/proto
+	path = mesh_shared/src/main/proto
 	url = https://github.com/meshtastic/Meshtastic-protobufs.git
 [submodule "geeksville-androidlib"]
 	path = geeksville-androidlib

@@ -41,6 +41,10 @@ import com.geeksville.concurrent.handledLaunch
 import com.geeksville.mesh.model.Channel
 import com.geeksville.mesh.model.UIViewModel
 import com.geeksville.mesh.service.*
+import com.geeksville.mesh.shared.DataPacket
+import com.geeksville.mesh.shared.IMeshService
+import com.geeksville.mesh.shared.MessageStatus
+import com.geeksville.mesh.shared.NodeInfo
 import com.geeksville.mesh.ui.*
 import com.geeksville.util.Exceptions
 import com.geeksville.util.exceptionReporter
@@ -741,10 +745,10 @@ class MainActivity : AppCompatActivity(), Logging,
 
     private
     val mesh = object :
-        ServiceClient<com.geeksville.mesh.IMeshService>({
-            com.geeksville.mesh.IMeshService.Stub.asInterface(it)
+        ServiceClient<IMeshService>({
+            IMeshService.Stub.asInterface(it)
         }) {
-        override fun onConnected(service: com.geeksville.mesh.IMeshService) {
+        override fun onConnected(service: IMeshService) {
 
             /*
                 Note: we must call this callback in a coroutine.  Because apparently there is only a single activity looper thread.  and if that onConnected override

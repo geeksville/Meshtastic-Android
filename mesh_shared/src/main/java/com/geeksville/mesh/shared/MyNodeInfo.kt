@@ -1,4 +1,4 @@
-package com.geeksville.mesh
+package com.geeksville.mesh.shared
 
 import android.os.Parcel
 import android.os.Parcelable

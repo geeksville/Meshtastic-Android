@@ -13,11 +13,11 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.geeksville.android.Logging
-import com.geeksville.mesh.DataPacket
-import com.geeksville.mesh.MessageStatus
 import com.geeksville.mesh.R
 import com.geeksville.mesh.model.UIViewModel
 import com.geeksville.mesh.service.MeshService
+import com.geeksville.mesh.shared.DataPacket
+import com.geeksville.mesh.shared.MessageStatus
 import com.google.android.material.chip.Chip
 import kotlinx.android.synthetic.main.adapter_message_layout.view.*
 import kotlinx.android.synthetic.main.messages_fragment.*
@@ -40,7 +40,8 @@ class MessagesFragment : ScreenFragment("Messages"), Logging {
 
     private val model: UIViewModel by activityViewModels()
 
-    private val dateTimeFormat: DateFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.MEDIUM)
+    private val dateTimeFormat: DateFormat =
+        DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.MEDIUM)
 
     // Provide a direct reference to each of the views within a data item
     // Used to cache the views within the item layout for fast access

@@ -1,9 +1,13 @@
-package com.geeksville.mesh
+package com.geeksville.mesh.shared
 
 import android.os.Parcel
 import android.os.Parcelable
+import com.geeksville.mesh.MeshProtos
 import kotlinx.android.parcel.Parcelize
 import kotlinx.serialization.Serializable
+import java.nio.charset.Charset
+
+private val utf8 = Charset.forName("UTF-8")
 
 @Parcelize
 enum class MessageStatus : Parcelable {

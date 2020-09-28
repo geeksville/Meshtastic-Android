@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/geeksville-androidlib" />
+            <option value="$PROJECT_DIR$/mesh_shared" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
